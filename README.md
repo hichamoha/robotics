@@ -1,13 +1,13 @@
 # robotics - Crane Damping
 The following conceptual problems must be resolved to make a robot succeed in performing a typical task:
-– Forward Kinematics 
-– Inverse Kinematics 
-– Velocity Kinematics/Jacobians
-– Dynamics 
-– Path Planning and Trajectory Generation 
-– Motion Control 
-– ( Force Control )
-– Sequence programming (and task description)
+- Forward Kinematics 
+- Inverse Kinematics 
+- Velocity Kinematics/Jacobians
+- Dynamics 
+- Path Planning and Trajectory Generation 
+- Motion Control 
+- ( Force Control )
+- Sequence programming (and task description)
 
 ## Project Description
 The purpose of this project is to design a controller for damping a crane with a swinging load. The system
