@@ -1,0 +1,150 @@
+MODULE Module1
+    
+    CONST robtarget Home:=[[-455.884572681,-625,-494],[0.866025404,0,-0.5,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+   
+    CONST robtarget above_Pick1:=[[0,0,-50],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Pick1:=[[0,0,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget above_Place1:=[[0,50,-50],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place1:=[[0,50,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
+    !CONST robtarget above_Place1_10:=[[0,50,-50],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+
+    CONST robtarget above_Pick_2:=[[50,0,-50],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Pick_2:=[[50,0,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget above_Place_2:=[[50,50,-50],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_2:=[[50,50,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
+    CONST robtarget above_Pick_3:=[[100,0,-50],[1,0,0,0],[1,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Pick_3:=[[100,0,0],[1,0,0,0],[1,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget above_Place_3:=[[100,50,-50],[1,0,0,0],[1,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_3:=[[100,50,0],[1,0,0,0],[1,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
+    CONST robtarget above_Pick_4:=[[150,0,-50],[1,0,0,0],[1,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Pick_4:=[[150,0,0],[1,0,0,0],[1,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget above_Place_4:=[[150,50,-50],[1,0,0,0],[1,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_4:=[[150,50,0],[1,0,0,0],[1,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
+    CONST robtarget above_Pick_5:=[[200,0,-50],[1,0,0,0],[1,0,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Pick_5:=[[200,0,0],[1,0,0,0],[1,0,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget above_Place_5:=[[200,50,-50],[1,0,0,0],[1,0,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_5:=[[200,50,0],[1,0,0,0],[1,0,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
+   	
+    PROC main()
+	Path1;
+        Path2;
+        Path_3;
+        Path_4;
+        Path_5;
+    ENDPROC
+
+    PROC Path1()
+        MoveJ Home,v100,z100,gripper\WObj:=Workobject_1;
+        ! set the digital outputs to OPEN the gripper
+        waitTime 2;
+        SetDO DO10_0,1;
+        SetDO DO10_1,0;
+        WaitTime 2;
+
+        MoveL above_Pick1,v100,z10,gripper\WObj:=Workobject_1;
+        MoveL Pick1,v100,fine,gripper\WObj:=Workobject_1;
+        WaitTime 2;
+        ! set the digital outputs to CLOSE the gripper
+        SetDO DO10_0,0;  
+        SetDO DO10_1,1;
+        WaitTime 2;
+        MoveL above_Pick1,v100,z10,gripper\WObj:=Workobject_1;
+
+        MoveL above_Place1,v100,z10,gripper\WObj:=Workobject_1;
+        MoveL Place1,v100,fine,gripper\WObj:=Workobject_1;
+        WaitTime 2;
+        ! set the digital outputs to OPEN the gripper
+        SetDO DO10_0,1;
+        SetDO DO10_1,0;
+        WaitTime 2;
+        MoveL above_Place1,v100,z10,gripper\WObj:=Workobject_1;
+    ENDPROC
+
+    PROC Path2()
+        MoveL above_Pick_2,v100,z10,gripper\WObj:=Workobject_1;
+        MoveL Pick_2,v100,fine,gripper\WObj:=Workobject_1;
+        WaitTime 2;
+        ! set the digital outputs to CLOSE the gripper
+        SetDO DO10_0,0;  
+        SetDO DO10_1,1;
+        WaitTime 2;
+        MoveL above_Pick_2,v100,z10,gripper\WObj:=Workobject_1;
+
+        MoveL above_Place_2,v100,z10,gripper\WObj:=Workobject_1;
+        MoveL Place_2,v100,fine,gripper\WObj:=Workobject_1;
+        WaitTime 2;
+        ! set the digital outputs to OPEN the gripper
+        SetDO DO10_0,1;
+        SetDO DO10_1,0;
+        WaitTime 2;
+        MoveL above_Place_2,v100,z10,gripper\WObj:=Workobject_1;
+    ENDPROC
+
+    PROC Path_3()
+        MoveL above_Pick_3,v100,z10,gripper\WObj:=Workobject_1;
+        MoveL Pick_3,v100,fine,gripper\WObj:=Workobject_1;
+        WaitTime 2;
+        ! set the digital outputs to CLOSE the gripper
+        SetDO DO10_0,0;  
+        SetDO DO10_1,1;
+        WaitTime 2;
+        MoveL above_Pick_3,v100,z10,gripper\WObj:=Workobject_1;
+
+        MoveL above_Place_3,v100,z10,gripper\WObj:=Workobject_1;
+        MoveL Place_3,v100,fine,gripper\WObj:=Workobject_1;
+        WaitTime 2;
+        ! set the digital outputs to OPEN the gripper
+        SetDO DO10_0,1;
+        SetDO DO10_1,0;
+        WaitTime 2;
+        MoveL above_Place_3,v100,z10,gripper\WObj:=Workobject_1;
+    ENDPROC
+
+    PROC Path_4()
+        MoveL above_Pick_4,v100,z10,gripper\WObj:=Workobject_1;
+        MoveL Pick_4,v100,fine,gripper\WObj:=Workobject_1;
+        WaitTime 2;
+        ! set the digital outputs to CLOSE the gripper
+        SetDO DO10_0,0;  
+        SetDO DO10_1,1;
+        WaitTime 2;
+        MoveL above_Pick_4,v100,z10,gripper\WObj:=Workobject_1;
+
+        MoveL above_Place_4,v100,z10,gripper\WObj:=Workobject_1;
+        MoveL Place_4,v100,fine,gripper\WObj:=Workobject_1;
+        WaitTime 2;
+        ! set the digital outputs to OPEN the gripper
+        SetDO DO10_0,1;
+        SetDO DO10_1,0;
+        WaitTime 2;
+        MoveL above_Place_4,v100,z10,gripper\WObj:=Workobject_1;
+    ENDPROC
+
+    PROC Path_5()
+        MoveL above_Pick_5,v100,z10,gripper\WObj:=Workobject_1;
+        MoveL Pick_5,v100,fine,gripper\WObj:=Workobject_1;
+        WaitTime 2;
+        ! set the digital outputs to CLOSE the gripper
+        SetDO DO10_0,0;  
+        SetDO DO10_1,1;
+        WaitTime 2;
+        MoveL above_Pick_5,v100,z10,gripper\WObj:=Workobject_1;
+
+        MoveL above_Place_5,v100,z10,gripper\WObj:=Workobject_1;
+        MoveL Place_5,v100,fine,gripper\WObj:=Workobject_1;
+        WaitTime 2;
+        ! set the digital outputs to OPEN the gripper
+        SetDO DO10_0,1;
+        SetDO DO10_1,0;
+        WaitTime 2;
+        MoveL above_Place_5,v100,z10,gripper\WObj:=Workobject_1;
+
+        MoveJ Home,v1000,z100,gripper\WObj:=Workobject_1;
+    ENDPROC
+    
+ENDMODULE

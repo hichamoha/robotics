@@ -1,0 +1,9 @@
+// extctrl_example20200707.lc
+
+// Parameters
+sample double amplitude;
+sample double frequency;
+
+// Testsignals
+sample double tp1[6];
+sample double sine;

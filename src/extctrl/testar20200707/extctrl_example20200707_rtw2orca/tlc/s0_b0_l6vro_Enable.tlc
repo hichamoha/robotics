@@ -1,0 +1,17 @@
+%implements s0_b0_l6vro_Enable "C"
+
+%function Enable(block, system) Output
+%<SLibCG_TrackDW(0)>\
+/* Enable for Sin: '<Root>/Sine Wave' */
+extctrl_example20200707_DWork->systemEnable = 1;
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Enable(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(0, 3, 0)
+%<comma>SimStructType S\
+%assign comma = ", "
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 3, fcnProtoType)>
+%endfunction

@@ -1,0 +1,256 @@
+%implements s0_b0_6myro_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+int32_T rowIdx;
+real_T lastSin_tmp;
+%closefile localVarDecl
+%<SLibCG_TrackDW(0)>\
+%<SLibCG_TrackBlockIO(0)>\
+%<SLibCG_TrackEO(14)>\
+%<SLibCG_TrackEO(13)>\
+%<SLibCG_TrackEO(12)>\
+%<SLibCG_TrackEO(11)>\
+%<SLibCG_TrackEO(10)>\
+%<SLibCG_TrackEO(9)>\
+%<SLibCG_TrackEO(8)>\
+%<SLibCG_TrackEO(7)>\
+%<SLibCG_TrackEO(6)>\
+%<SLibCG_TrackEO(5)>\
+%<SLibCG_TrackEO(4)>\
+%<SLibCG_TrackEO(3)>\
+%<SLibCG_TrackEO(2)>\
+%<SLibCG_TrackEO(1)>\
+%<SLibCG_TrackEO(0)>\
+%<SLibCG_TrackEI(28)>\
+%<SLibCG_TrackEI(27)>\
+%<SLibCG_TrackEI(26)>\
+%<SLibCG_TrackEI(25)>\
+%<SLibCG_TrackEI(24)>\
+%<SLibCG_TrackEI(23)>\
+%<SLibCG_TrackEI(22)>\
+%<SLibCG_TrackEI(20)>\
+%<SLibCG_TrackEI(15)>\
+%<SLibCG_TrackEI(14)>\
+%<SLibCG_TrackEI(13)>\
+%<SLibCG_TrackEI(2)>\
+%<SLibCG_TrackEI(1)>\
+%<SLibCG_TrackEI(0)>\
+/* {S!d4}Outport: '<Root>/ext2irb.robot[0].joint[i].parKp' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKp'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKp[0] = extctrl_example_U->irb2extrobot0jointiparKp[0];
+/* {S!d6}Outport: '<Root>/ext2irb.robot[0].joint[i].parKv' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKv'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKv[0] = extctrl_example_U->irb2extrobot0jointiparKv[0];
+/* {S!d8}Outport: '<Root>/ext2irb.robot[0].joint[i].parKi' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKi'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKi[0] = extctrl_example_U->irb2extrobot0jointiparKi[0];
+/* {S!d10}Outport: '<Root>/ext2irb.robot[0].joint[i].parKp' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKp'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKp[1] = extctrl_example_U->irb2extrobot0jointiparKp[1];
+/* {S!d12}Outport: '<Root>/ext2irb.robot[0].joint[i].parKv' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKv'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKv[1] = extctrl_example_U->irb2extrobot0jointiparKv[1];
+/* {S!d14}Outport: '<Root>/ext2irb.robot[0].joint[i].parKi' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKi'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKi[1] = extctrl_example_U->irb2extrobot0jointiparKi[1];
+/* {S!d16}Outport: '<Root>/ext2irb.robot[0].joint[i].parKp' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKp'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKp[2] = extctrl_example_U->irb2extrobot0jointiparKp[2];
+/* {S!d18}Outport: '<Root>/ext2irb.robot[0].joint[i].parKv' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKv'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKv[2] = extctrl_example_U->irb2extrobot0jointiparKv[2];
+/* {S!d20}Outport: '<Root>/ext2irb.robot[0].joint[i].parKi' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKi'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKi[2] = extctrl_example_U->irb2extrobot0jointiparKi[2];
+/* {S!d22}Outport: '<Root>/ext2irb.robot[0].joint[i].parKp' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKp'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKp[3] = extctrl_example_U->irb2extrobot0jointiparKp[3];
+/* {S!d24}Outport: '<Root>/ext2irb.robot[0].joint[i].parKv' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKv'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKv[3] = extctrl_example_U->irb2extrobot0jointiparKv[3];
+/* {S!d26}Outport: '<Root>/ext2irb.robot[0].joint[i].parKi' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKi'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKi[3] = extctrl_example_U->irb2extrobot0jointiparKi[3];
+/* {S!d28}Outport: '<Root>/ext2irb.robot[0].joint[i].parKp' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKp'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKp[4] = extctrl_example_U->irb2extrobot0jointiparKp[4];
+/* {S!d30}Outport: '<Root>/ext2irb.robot[0].joint[i].parKv' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKv'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKv[4] = extctrl_example_U->irb2extrobot0jointiparKv[4];
+/* {S!d32}Outport: '<Root>/ext2irb.robot[0].joint[i].parKi' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKi'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKi[4] = extctrl_example_U->irb2extrobot0jointiparKi[4];
+/* {S!d34}Outport: '<Root>/ext2irb.robot[0].joint[i].parKp' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKp'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKp[5] = extctrl_example_U->irb2extrobot0jointiparKp[5];
+/* {S!d36}Outport: '<Root>/ext2irb.robot[0].joint[i].parKv' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKv'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKv[5] = extctrl_example_U->irb2extrobot0jointiparKv[5];
+/* {S!d38}Outport: '<Root>/ext2irb.robot[0].joint[i].parKi' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKi'
+ */
+extctrl_example_Y->ext2irbrobot0jointiparKi[5] = extctrl_example_U->irb2extrobot0jointiparKi[5];
+/* {S!d40}CombinatorialLogic: '<S1>/Logic' incorporates:
+ *  Constant: '<Root>/Constant'
+ *  Constant: '<Root>/Constant1'
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.instruction'
+ *  Memory: '<S1>/Memory'
+ *  RelationalOperator: '<Root>/Relational Operator'
+ *  RelationalOperator: '<Root>/Relational Operator1'
+ */
+rowIdx = (int32_T)(((((uint32_T)(89300.0 == extctrl_example_U->irb2extrobot0mocgendatainstruction) << 1) + (89302.0 == extctrl_example_U->irb2extrobot0mocgendatainstruction)) << 1) + extctrl_example_DW->Memory_PreviousInput);
+extctrl_example_B->Logic[0U] = extctrl_example_ConstP.Logic_table[(uint32_T)rowIdx];
+extctrl_example_B->Logic[1U] = extctrl_example_ConstP.Logic_table[rowIdx + 8U];
+/* {S!d42}Sin: '<Root>/Sine Wave' */
+if (extctrl_example_DW->systemEnable != 0) {
+    lastSin_tmp = extctrl_example_P.frequency * %<(SLibCG_SE(LibGetTaskTime(0)))>;
+    extctrl_example_DW->lastSin = sin(lastSin_tmp);
+    extctrl_example_DW->lastCos = cos(lastSin_tmp);
+    extctrl_example_DW->systemEnable = 0;
+}
+extctrl_example_B->sine = ((extctrl_example_DW->lastSin * 0.99918725891521154 + extctrl_example_DW->lastCos * -0.04030907616785482) * 0.99918725891521154 + (extctrl_example_DW->lastCos * 0.99918725891521154 - extctrl_example_DW->lastSin * -0.04030907616785482) * 0.04030907616785482) * extctrl_example_P.amplitude;
+/* {E!d42}End of Sin: '<Root>/Sine Wave' */
+
+/* {S!d44}Outport: '<Root>/ext2irb.robot[0].joint[i].posRef' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].posRef'
+ *  Product: '<Root>/Product'
+ *  Sum: '<Root>/Add'
+ */
+extctrl_example_Y->ext2irbrobot0jointiposRef[0] = extctrl_example_U->tp1i[0];
+extctrl_example_Y->ext2irbrobot0jointiposRef[1] = extctrl_example_U->tp1i[1];
+extctrl_example_Y->ext2irbrobot0jointiposRef[2] = extctrl_example_U->tp1i[2];
+extctrl_example_Y->ext2irbrobot0jointiposRef[3] = extctrl_example_U->tp1i[3];
+extctrl_example_Y->ext2irbrobot0jointiposRef[4] = extctrl_example_U->tp1i[4];
+extctrl_example_Y->ext2irbrobot0jointiposRef[5] = (real_T)extctrl_example_B->Logic[0] * extctrl_example_B->sine + extctrl_example_U->tp1i[5];
+/* {S!d46}Outport: '<Root>/ext2irb.robot[0].mocgendata.instruction' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.instruction'
+ */
+extctrl_example_Y->ext2irbrobot0mocgendatainstruction = extctrl_example_U->irb2extrobot0mocgendatainstruction;
+/* {S!d48}Outport: '<Root>/ext2irb.robot[0].mocgendata.value1' */
+extctrl_example_Y->ext2irbrobot0mocgendatavalue1 = extctrl_example_B->Logic[0];
+/* {S!d50}Outport: '<Root>/ext2irb.robot[0].joint[i].velRef' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].velRef'
+ */
+extctrl_example_Y->ext2irbrobot0jointivelRef[0] = extctrl_example_U->irb2extrobot0jointivelRef[0];
+/* {S!d52}Outport: '<Root>/ext2irb.robot[0].joint[i].trqFfw' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].trqFfw'
+ */
+extctrl_example_Y->ext2irbrobot0jointitrqFfw[0] = extctrl_example_U->irb2extrobot0jointitrqFfw[0];
+/* {S!d54}Outport: '<Root>/ext2irb.robot[0].joint[i].velRef' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].velRef'
+ */
+extctrl_example_Y->ext2irbrobot0jointivelRef[1] = extctrl_example_U->irb2extrobot0jointivelRef[1];
+/* {S!d56}Outport: '<Root>/ext2irb.robot[0].joint[i].trqFfw' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].trqFfw'
+ */
+extctrl_example_Y->ext2irbrobot0jointitrqFfw[1] = extctrl_example_U->irb2extrobot0jointitrqFfw[1];
+/* {S!d58}Outport: '<Root>/ext2irb.robot[0].joint[i].velRef' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].velRef'
+ */
+extctrl_example_Y->ext2irbrobot0jointivelRef[2] = extctrl_example_U->irb2extrobot0jointivelRef[2];
+/* {S!d60}Outport: '<Root>/ext2irb.robot[0].joint[i].trqFfw' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].trqFfw'
+ */
+extctrl_example_Y->ext2irbrobot0jointitrqFfw[2] = extctrl_example_U->irb2extrobot0jointitrqFfw[2];
+/* {S!d62}Outport: '<Root>/ext2irb.robot[0].joint[i].velRef' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].velRef'
+ */
+extctrl_example_Y->ext2irbrobot0jointivelRef[3] = extctrl_example_U->irb2extrobot0jointivelRef[3];
+/* {S!d64}Outport: '<Root>/ext2irb.robot[0].joint[i].trqFfw' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].trqFfw'
+ */
+extctrl_example_Y->ext2irbrobot0jointitrqFfw[3] = extctrl_example_U->irb2extrobot0jointitrqFfw[3];
+/* {S!d66}Outport: '<Root>/ext2irb.robot[0].joint[i].velRef' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].velRef'
+ */
+extctrl_example_Y->ext2irbrobot0jointivelRef[4] = extctrl_example_U->irb2extrobot0jointivelRef[4];
+/* {S!d68}Outport: '<Root>/ext2irb.robot[0].joint[i].trqFfw' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].trqFfw'
+ */
+extctrl_example_Y->ext2irbrobot0jointitrqFfw[4] = extctrl_example_U->irb2extrobot0jointitrqFfw[4];
+/* {S!d70}Outport: '<Root>/ext2irb.robot[0].joint[i].velRef' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].velRef'
+ */
+extctrl_example_Y->ext2irbrobot0jointivelRef[5] = extctrl_example_U->irb2extrobot0jointivelRef[5];
+/* {S!d72}Outport: '<Root>/ext2irb.robot[0].joint[i].trqFfw' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].trqFfw'
+ */
+extctrl_example_Y->ext2irbrobot0jointitrqFfw[5] = extctrl_example_U->irb2extrobot0jointitrqFfw[5];
+/* {S!d74}Outport: '<Root>/ext2irb.robot[0].mocgendata.string1[i]' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.string1[i]'
+ */
+memcpy(&extctrl_example_Y->ext2irbrobot0mocgendatastring1i[0], &extctrl_example_U->irb2extrobot0mocgendatastring1i[0], 20U * sizeof(real_T));
+/* {S!d76}Outport: '<Root>/ext2irb.robot[0].mocgendata.string2[i]' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.string2[i]'
+ */
+memcpy(&extctrl_example_Y->ext2irbrobot0mocgendatastring2i[0], &extctrl_example_U->irb2extrobot0mocgendatastring2i[0], 20U * sizeof(real_T));
+/* {S!d78}Outport: '<Root>/ext2irb.robot[0].mocgendata.value2' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.value2'
+ */
+extctrl_example_Y->ext2irbrobot0mocgendatavalue2 = extctrl_example_U->irb2extrobot0mocgendatavalue2;
+/* {S!d80}Outport: '<Root>/ext2irb.robot[0].mocgendata.value3' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.value3'
+ */
+extctrl_example_Y->ext2irbrobot0mocgendatavalue3 = extctrl_example_U->irb2extrobot0mocgendatavalue3;
+/* {S!d82}Outport: '<Root>/ext2irb.robot[0].mocgendata.value4' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.value4'
+ */
+extctrl_example_Y->ext2irbrobot0mocgendatavalue4 = extctrl_example_U->irb2extrobot0mocgendatavalue4;
+/* {S!d84}Outport: '<Root>/ext2irb.robot[0].mocgendata.value5' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.value5'
+ */
+extctrl_example_Y->ext2irbrobot0mocgendatavalue5 = extctrl_example_U->irb2extrobot0mocgendatavalue5;
+/* {S!d86}Outport: '<Root>/ext2irb.robot[0].mocgendata.value6' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.value6'
+ */
+extctrl_example_Y->ext2irbrobot0mocgendatavalue6 = extctrl_example_U->irb2extrobot0mocgendatavalue6;
+%<SLibInsertSolverResetCode()>\
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[0].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(0, 1, 0)>
+%endif
+%if SLibCG_ArgAccessed(0, 1, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(0, 1, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(0, 1, 0)
+%<comma>%<::tSimStructType> * const extctrl_example_rtM\
+%assign comma = ", "
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 1, fcnProtoType)>
+%endfunction

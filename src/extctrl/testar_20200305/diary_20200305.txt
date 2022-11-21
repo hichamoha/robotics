@@ -1,0 +1,19 @@
+cd /home/julian/extctrl/testar_20200305
+
+OLD robotlab-page
+   https://wiki.control.lth.se/RobotLab
+NEW https://sites.google.com/a/ulund.org/robotwiki/
+  but (reguires ulund.org-login)
+
+
+Copy example file from /opt/robot/example/simulink/extctrl_irc5_main/
+
+   cp /opt/robot/example/simulink/extctrl_irc5_main/extctrl_example.mdl .
+
+matlab -nodesktop   (STARTS  v2012a)
+
+ALT.
+  VERSION=R2012a matlab
+
+---------
+	

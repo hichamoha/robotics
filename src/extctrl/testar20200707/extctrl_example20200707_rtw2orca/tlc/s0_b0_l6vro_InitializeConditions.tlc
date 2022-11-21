@@ -1,0 +1,19 @@
+%implements s0_b0_l6vro_InitializeConditions "C"
+
+%function InitializeConditions(block, system) Output
+%<SLibCG_TrackDW(0)>\
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+/* InitializeConditions for Memory: '<S1>/Memory' */
+extctrl_example20200707_DWork->Memory_PreviousInput = TRUE;
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void InitializeConditions(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(0, 0, 0)
+%<comma>SimStructType S\
+%assign comma = ", "
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 0, fcnProtoType)>
+%endfunction

@@ -1,0 +1,77 @@
+MODULE Module1
+	CONST robtarget Target_L_10:=[[100,0,0],[1,0,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_L_20:=[[0,0,0],[1,0,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_L_30:=[[0,50,0],[1,0,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_T_10:=[[100,70,0],[1,0,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_T_20:=[[100,100,0],[1,0,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_T_30:=[[100,130,0],[1,0,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_T_40:=[[0,100,0],[1,0,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_H_10:=[[0,150,0],[1,0,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_H_20:=[[50,150,0],[1,0,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_H_30:=[[100,150,0],[1,0,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_H_40:=[[100,200,0],[1,0,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_H_50:=[[50,200,0],[1,0,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	CONST robtarget Target_H_60:=[[0,200,0],[1,0,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+        CONST robtarget Target_10:=[[647.048868101,0,659.200913076],[0.608761426,-0.000000006,0.793353343,-0.000000005],[0,-1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+
+    !***********************************************************
+    !
+    ! Module:  Module1
+    !
+    ! Description:
+    !   Exercise 1, Robot Studio, using a pen tool 
+    !   (FRTF20/MMKF15 Applied Robotics), LTH, Lund University
+    !
+    ! Author: Hicham Mohamad (hi8826mo-s)
+    !
+    ! Version: 1.0
+    !
+    !***********************************************************
+    
+    
+    !***********************************************************
+    !
+    ! Procedure main
+    !
+    !   This is the entry point of your program
+    !
+    !***********************************************************
+    PROC main()
+        !Add your code here
+        Path_L;
+        Path_T;
+        Path_H;
+        
+    ENDPROC
+	PROC Path_L()
+	    MoveJ Target_10,v1000,z100,pen\WObj:=wobj0; ! starting at Home position
+	    MoveJ Target_L_10,v100,z5,pen\WObj:=Workobject_1; ! target outside the paper
+	    MoveL offs(Target_L_10,0,0,15),v100,z1,pen\WObj:=Workobject_1;
+            MoveL offs(Target_L_20,0,0,15),v100,z1,pen\WObj:=Workobject_1; ! targets inside the paper
+            MoveL offs(Target_L_30,0,0,15),v100,z1,pen\WObj:=Workobject_1;
+	    MoveL Target_L_30,v1000,z100,pen\WObj:=Workobject_1;
+	ENDPROC
+	PROC Path_T()
+	    MoveL Target_T_10,v1000,z100,pen\WObj:=Workobject_1;
+            MoveL offs(Target_T_10,0,0,15),v100,z1,pen\WObj:=Workobject_1;
+	    MoveL offs(Target_T_20,0,0,15),v100,z1,pen\WObj:=Workobject_1;
+	    MoveL offs(Target_T_30,0,0,15),v100,z1,pen\WObj:=Workobject_1;
+            MoveL offs(Target_T_20,0,0,15),v100,z1,pen\WObj:=Workobject_1;
+	    MoveL offs(Target_T_40,0,0,15),v100,z1,pen\WObj:=Workobject_1;
+            MoveL Target_T_40,v1000,z100,pen\WObj:=Workobject_1;
+	ENDPROC
+	PROC Path_H()
+            MoveL Target_H_10,v1000,z100,pen\WObj:=Workobject_1;
+	    MoveL offs(Target_H_10,0,0,15),v100,z1,pen\WObj:=Workobject_1;
+	    !MoveL offs(Target_H_20,0,0,15),v100,z1,pen\WObj:=Workobject_1;
+	    MoveL offs(Target_H_30,0,0,15),v100,z1,pen\WObj:=Workobject_1;
+            MoveL offs(Target_H_20,0,0,15),v100,z1,pen\WObj:=Workobject_1;
+            MoveL offs(Target_H_50,0,0,15),v100,z1,pen\WObj:=Workobject_1;
+	    MoveL offs(Target_H_40,0,0,15),v100,z1,pen\WObj:=Workobject_1;
+	    !MoveL offs(Target_H_50,0,0,15),v100,z1,pen\WObj:=Workobject_1;
+	    MoveL offs(Target_H_60,0,0,15),v100,z1,pen\WObj:=Workobject_1;
+            MoveL Target_H_60,v1000,z100,pen\WObj:=Workobject_1;
+            MoveJ Target_10,v1000,z100,pen\WObj:=wobj0; ! Ending at Home position
+	ENDPROC
+
+ENDMODULE

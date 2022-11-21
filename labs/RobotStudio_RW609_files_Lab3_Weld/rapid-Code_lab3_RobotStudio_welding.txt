@@ -1,0 +1,68 @@
+MODULE Module1
+    CONST robtarget close30_Start_Weld1:=[[88.999902674,268.100124472,-35.507307681],[0.657905664,-0.259153812,0.259155308,0.657904222],[-1,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Start_Weld1:=[[88.999898387,288.560280694,-13.566512547],[0.657905715,-0.259153768,0.259155346,0.657904174],[-1,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget End_Weld1:=[[212,288.562,-13.567],[0.853553391,-0.146446609,0.353553391,0.353553391],[-1,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget close30_End_Weld1:=[[197,273.562,-34.78],[0.853553391,-0.146446609,0.353553391,0.353553391],[-1,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
+    CONST robtarget Home:=[[80.000015044,-49.999919745,-185.999966966],[0.70578787,-0.043167799,0.043167847,0.7057879],[-1,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
+    CONST robtarget close30_Start_Weld2:=[[205.748987315,191.276068767,-44.45706083],[0.50667129,0.122868004,0.256584665,0.813850089],[-1,1,-3,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Start_Weld2:=[[219.548980767,200.069693369,-19.313373984],[0.50667117,0.122867881,0.256584843,0.813850126],[-1,1,-3,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget End_Weld2:=[[218.144198889,295.705647275,-18.982281955],[0.469679715,0.083555778,0.348047801,0.807020523],[-2,1,-3,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget close30_End_Weld2:=[[204.289967003,281.207566922,-41.295050237],[0.46967976,0.083555765,0.34804776,0.807020517],[-2,1,-3,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
+    CONST robtarget End_Weld3:=[[218.144199431,295.707181273,-216.981576667],[0.469679768,0.08355614,0.348047399,0.807020629],[-2,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget close30_End_Weld3:=[[218.144194215,295.707279324,-246.981571294],[0.469679778,0.083556127,0.348047399,0.807020624],[-2,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
+    CONST robtarget Home2_over:=[[122.758718042,394.420476468,-323.499453721],[0.013111929,0.062855596,-0.332025239,0.941082617],[-2,0,3,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
+    CONST robtarget close30_Start_Weld44:=[[80.234524436,369.394148064,-34.366812233],[0.011943148,0.021389882,0.420713019,-0.906862939],[-2,1,2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Start_Weld44:=[[80.235818992,339.394599494,-4.367136656],[0.01194321,0.021390264,0.42071292,-0.906862975],[-2,1,2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget End_Weld4:=[[476.230723898,339.392493134,-3.364654485],[0.090191898,0.198635669,-0.411104804,0.885100069],[-2,1,2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget close30_End_Weld4:=[[446.229130677,369.391436198,-33.362452753],[0.090193405,0.19863574,-0.411102554,0.885100945],[-2,1,2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	
+        PROC Weld1()
+	    MoveJ close30_Start_Weld1,v1000,z100,welding_gun\WObj:=Workobject_1;
+	    MoveJ Start_Weld1,v50,fine,welding_gun\WObj:=Workobject_1;
+	    MoveL End_Weld1,v50,fine,welding_gun\WObj:=Workobject_1;
+	    MoveL close30_End_Weld1,v1000,z100,welding_gun\WObj:=Workobject_1;
+	    MoveJ Home,v1000,z100,welding_gun\WObj:=Workobject_1;
+	ENDPROC
+    
+	PROC Weld2()
+	    MoveJ close30_Start_Weld2,v1000,z100,welding_gun\WObj:=Workobject_1;
+	    MoveJ Start_Weld2,v50,fine,welding_gun\WObj:=Workobject_1;
+	    MoveL End_Weld2,v50,fine,welding_gun\WObj:=Workobject_1;
+	    MoveL close30_End_Weld2,v1000,z100,welding_gun\WObj:=Workobject_1;
+            MoveJ Home,v1000,z100,welding_gun\WObj:=Workobject_1;
+	ENDPROC
+    
+	PROC Weld3()
+            MoveJ close30_End_Weld2,v1000,z100,welding_gun\WObj:=Workobject_1;
+            MoveJ End_Weld2,v1000,z100,welding_gun\WObj:=Workobject_1;
+            MoveL End_Weld3,v50,fine,welding_gun\WObj:=Workobject_1;
+            MoveL close30_End_Weld3,v1000,z100,welding_gun\WObj:=Workobject_1;
+            MoveJ Home,v1000,z100,welding_gun\WObj:=Workobject_1;
+            !MoveL Home2_over,v1000,z100,welding_gun\WObj:=Workobject_1;
+
+	ENDPROC
+	PROC Weld4()
+            !MoveL Home2_over,v1000,z100,welding_gun\WObj:=Workobject_1;
+            MoveJ Home2_over,v1000,z100,welding_gun\WObj:=Workobject_1;
+            MoveJ close30_Start_Weld44,v1000,z100,welding_gun\WObj:=Workobject_1;
+            MoveL Start_Weld44,v50,fine,welding_gun\WObj:=Workobject_1;
+            MoveL End_Weld4,v50,fine,welding_gun\WObj:=Workobject_1;
+            MoveL close30_End_Weld4,v1000,z100,welding_gun\WObj:=Workobject_1;
+            MoveL Home2_over,v1000,z100,welding_gun\WObj:=Workobject_1;
+            MoveJ Home,v1000,z100,welding_gun\WObj:=Workobject_1;
+
+	ENDPROC
+    
+        PROC main()
+            Weld1;
+            Weld2;
+            Weld3;
+            Weld4;
+        ENDPROC
+    
+ENDMODULE

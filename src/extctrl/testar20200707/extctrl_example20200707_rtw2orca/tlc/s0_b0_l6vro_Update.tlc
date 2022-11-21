@@ -1,0 +1,29 @@
+%implements s0_b0_l6vro_Update "C"
+
+%function Update(block, system) Output
+%<SLibCG_TrackDW(0)>\
+%<SLibCG_TrackBlockIO(0)>\
+/* Update for Memory: '<S1>/Memory' */
+extctrl_example20200707_DWork->Memory_PreviousInput = extctrl_example20200707_B->Logic[0];
+/* Update for Sin: '<Root>/Sine Wave' */
+HoldSine = extctrl_example20200707_DWork->lastSin;
+extctrl_example20200707_DWork->lastSin = extctrl_example20200707_DWork->lastSin * 0.99918725891521154 + extctrl_example20200707_DWork->lastCos * 0.04030907616785482;
+extctrl_example20200707_DWork->lastCos = extctrl_example20200707_DWork->lastCos * 0.99918725891521154 - HoldSine * 0.04030907616785482;
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Update(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(0, 2, 0)
+%<comma>SimStructType S\
+%assign comma = ", "
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 2, fcnProtoType)>
+
+%assign localVarDecl = ""
+%openfile localVarDecl
+real_T HoldSine;
+
+%closefile localVarDecl
+%<LibSetSystemField(system, "CachedUpdateLocalVars", localVarDecl)>
+%endfunction

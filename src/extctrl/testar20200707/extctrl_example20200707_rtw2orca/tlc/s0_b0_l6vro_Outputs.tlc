@@ -1,0 +1,137 @@
+%implements s0_b0_l6vro_Outputs "C"
+
+%function Outputs(block, system) Output
+%<SLibCG_TrackDW(0)>\
+%<SLibCG_TrackParam(0)>\
+%<SLibCG_TrackBlockIO(0)>\
+/* Outport: '<Root>/ext2irb.robot[0].joint[i].parKp' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKp'
+ */
+%<(SLibCG_SE(SLibCG_EO(0, 6, "", -1, "", 0)))> = %<(SLibCG_SE(SLibCG_EI(0, 6, "", -1, "", 0)))>;
+%<(SLibCG_SE(SLibCG_EO(0, 6, "", -1, "", 1)))> = %<(SLibCG_SE(SLibCG_EI(0, 6, "", -1, "", 1)))>;
+%<(SLibCG_SE(SLibCG_EO(0, 6, "", -1, "", 2)))> = %<(SLibCG_SE(SLibCG_EI(0, 6, "", -1, "", 2)))>;
+%<(SLibCG_SE(SLibCG_EO(0, 6, "", -1, "", 3)))> = %<(SLibCG_SE(SLibCG_EI(0, 6, "", -1, "", 3)))>;
+%<(SLibCG_SE(SLibCG_EO(0, 6, "", -1, "", 4)))> = %<(SLibCG_SE(SLibCG_EI(0, 6, "", -1, "", 4)))>;
+%<(SLibCG_SE(SLibCG_EO(0, 6, "", -1, "", 5)))> = %<(SLibCG_SE(SLibCG_EI(0, 6, "", -1, "", 5)))>;
+/* Outport: '<Root>/ext2irb.robot[0].joint[i].parKv' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKv'
+ */
+%<(SLibCG_SE(SLibCG_EO(1, 6, "", -1, "", 0)))> = %<(SLibCG_SE(SLibCG_EI(1, 6, "", -1, "", 0)))>;
+%<(SLibCG_SE(SLibCG_EO(1, 6, "", -1, "", 1)))> = %<(SLibCG_SE(SLibCG_EI(1, 6, "", -1, "", 1)))>;
+%<(SLibCG_SE(SLibCG_EO(1, 6, "", -1, "", 2)))> = %<(SLibCG_SE(SLibCG_EI(1, 6, "", -1, "", 2)))>;
+%<(SLibCG_SE(SLibCG_EO(1, 6, "", -1, "", 3)))> = %<(SLibCG_SE(SLibCG_EI(1, 6, "", -1, "", 3)))>;
+%<(SLibCG_SE(SLibCG_EO(1, 6, "", -1, "", 4)))> = %<(SLibCG_SE(SLibCG_EI(1, 6, "", -1, "", 4)))>;
+%<(SLibCG_SE(SLibCG_EO(1, 6, "", -1, "", 5)))> = %<(SLibCG_SE(SLibCG_EI(1, 6, "", -1, "", 5)))>;
+/* Outport: '<Root>/ext2irb.robot[0].joint[i].parKi' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].parKi'
+ */
+%<(SLibCG_SE(SLibCG_EO(2, 6, "", -1, "", 0)))> = %<(SLibCG_SE(SLibCG_EI(2, 6, "", -1, "", 0)))>;
+%<(SLibCG_SE(SLibCG_EO(2, 6, "", -1, "", 1)))> = %<(SLibCG_SE(SLibCG_EI(2, 6, "", -1, "", 1)))>;
+%<(SLibCG_SE(SLibCG_EO(2, 6, "", -1, "", 2)))> = %<(SLibCG_SE(SLibCG_EI(2, 6, "", -1, "", 2)))>;
+%<(SLibCG_SE(SLibCG_EO(2, 6, "", -1, "", 3)))> = %<(SLibCG_SE(SLibCG_EI(2, 6, "", -1, "", 3)))>;
+%<(SLibCG_SE(SLibCG_EO(2, 6, "", -1, "", 4)))> = %<(SLibCG_SE(SLibCG_EI(2, 6, "", -1, "", 4)))>;
+%<(SLibCG_SE(SLibCG_EO(2, 6, "", -1, "", 5)))> = %<(SLibCG_SE(SLibCG_EI(2, 6, "", -1, "", 5)))>;
+/* CombinatorialLogic: '<S1>/Logic' incorporates:
+ *  Constant: '<Root>/Constant'
+ *  Constant: '<Root>/Constant1'
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.instruction'
+ *  Memory: '<S1>/Memory'
+ *  RelationalOperator: '<Root>/Relational Operator'
+ *  RelationalOperator: '<Root>/Relational Operator1'
+ */
+i = (int32_T)(((uint32_T)(int32_T)(((uint32_T)(89300.0 == %<(SLibCG_SE(SLibCG_EI(20, 1, "", -1, "", 0)))>) << 1) + (uint32_T)(89302.0 == %<(SLibCG_SE(SLibCG_EI(20, 1, "", -1, "", 0)))>)) << 1) + (uint32_T)extctrl_example20200707_DWork->Memory_PreviousInput);
+extctrl_example20200707_B->Logic[0] = %<(SLibCG_SE(SLibCGIR_PV(9, 0, 0, 16, "", -1, "(uint32_T)i", 0)))>;
+extctrl_example20200707_B->Logic[1] = %<(SLibCG_SE(SLibCGIR_PV(9, 0, 0, 16, "", -1, "(uint32_T)i + 8U", 0)))>;
+/* Sin: '<Root>/Sine Wave' */
+if (extctrl_example20200707_DWork->systemEnable != 0) {
+    extctrl_example20200707_DWork->lastSin = sin(extctrl_example20200707_P->frequency * %<(SLibCG_SE(LibGetTaskTime(0)))>);
+    extctrl_example20200707_DWork->lastCos = cos(extctrl_example20200707_P->frequency * %<(SLibCG_SE(LibGetTaskTime(0)))>);
+    extctrl_example20200707_DWork->systemEnable = 0;
+}
+extctrl_example20200707_B->sine = ((extctrl_example20200707_DWork->lastSin * 0.99918725891521154 + extctrl_example20200707_DWork->lastCos * -0.04030907616785482) * 0.99918725891521154 + (extctrl_example20200707_DWork->lastCos * 0.99918725891521154 - extctrl_example20200707_DWork->lastSin * -0.04030907616785482) * 0.04030907616785482) * extctrl_example20200707_P->amplitude;
+/* End of Sin: '<Root>/Sine Wave' */
+
+/* Outport: '<Root>/ext2irb.robot[0].joint[i].posRef' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].posRef'
+ *  Product: '<Root>/Product'
+ *  Sum: '<Root>/Add'
+ */
+%<(SLibCG_SE(SLibCG_EO(3, 6, "", -1, "", 0)))> = %<(SLibCG_SE(SLibCG_EI(13, 6, "", -1, "", 0)))>;
+%<(SLibCG_SE(SLibCG_EO(3, 6, "", -1, "", 1)))> = %<(SLibCG_SE(SLibCG_EI(13, 6, "", -1, "", 1)))>;
+%<(SLibCG_SE(SLibCG_EO(3, 6, "", -1, "", 2)))> = %<(SLibCG_SE(SLibCG_EI(13, 6, "", -1, "", 2)))>;
+%<(SLibCG_SE(SLibCG_EO(3, 6, "", -1, "", 3)))> = %<(SLibCG_SE(SLibCG_EI(13, 6, "", -1, "", 3)))>;
+%<(SLibCG_SE(SLibCG_EO(3, 6, "", -1, "", 4)))> = %<(SLibCG_SE(SLibCG_EI(13, 6, "", -1, "", 4)))>;
+%<(SLibCG_SE(SLibCG_EO(3, 6, "", -1, "", 5)))> = (real_T)extctrl_example20200707_B->Logic[0] * extctrl_example20200707_B->sine + %<(SLibCG_SE(SLibCG_EI(13, 6, "", -1, "", 5)))>;
+/* Outport: '<Root>/ext2irb.robot[0].mocgendata.instruction' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.instruction'
+ */
+%<(SLibCG_SE(SLibCG_EO(6, 1, "", -1, "", 0)))> = %<(SLibCG_SE(SLibCG_EI(20, 1, "", -1, "", 0)))>;
+/* Outport: '<Root>/ext2irb.robot[0].mocgendata.value1' */
+%<(SLibCG_SE(SLibCG_EO(7, 1, "", -1, "", 0)))> = extctrl_example20200707_B->Logic[0];
+/* Outport: '<Root>/ext2irb.robot[0].joint[i].velRef' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].velRef'
+ */
+%<(SLibCG_SE(SLibCG_EO(4, 6, "", -1, "", 0)))> = %<(SLibCG_SE(SLibCG_EI(14, 6, "", -1, "", 0)))>;
+%<(SLibCG_SE(SLibCG_EO(4, 6, "", -1, "", 1)))> = %<(SLibCG_SE(SLibCG_EI(14, 6, "", -1, "", 1)))>;
+%<(SLibCG_SE(SLibCG_EO(4, 6, "", -1, "", 2)))> = %<(SLibCG_SE(SLibCG_EI(14, 6, "", -1, "", 2)))>;
+%<(SLibCG_SE(SLibCG_EO(4, 6, "", -1, "", 3)))> = %<(SLibCG_SE(SLibCG_EI(14, 6, "", -1, "", 3)))>;
+%<(SLibCG_SE(SLibCG_EO(4, 6, "", -1, "", 4)))> = %<(SLibCG_SE(SLibCG_EI(14, 6, "", -1, "", 4)))>;
+%<(SLibCG_SE(SLibCG_EO(4, 6, "", -1, "", 5)))> = %<(SLibCG_SE(SLibCG_EI(14, 6, "", -1, "", 5)))>;
+/* Outport: '<Root>/ext2irb.robot[0].joint[i].trqFfw' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].joint[i].trqFfw'
+ */
+%<(SLibCG_SE(SLibCG_EO(5, 6, "", -1, "", 0)))> = %<(SLibCG_SE(SLibCG_EI(15, 6, "", -1, "", 0)))>;
+%<(SLibCG_SE(SLibCG_EO(5, 6, "", -1, "", 1)))> = %<(SLibCG_SE(SLibCG_EI(15, 6, "", -1, "", 1)))>;
+%<(SLibCG_SE(SLibCG_EO(5, 6, "", -1, "", 2)))> = %<(SLibCG_SE(SLibCG_EI(15, 6, "", -1, "", 2)))>;
+%<(SLibCG_SE(SLibCG_EO(5, 6, "", -1, "", 3)))> = %<(SLibCG_SE(SLibCG_EI(15, 6, "", -1, "", 3)))>;
+%<(SLibCG_SE(SLibCG_EO(5, 6, "", -1, "", 4)))> = %<(SLibCG_SE(SLibCG_EI(15, 6, "", -1, "", 4)))>;
+%<(SLibCG_SE(SLibCG_EO(5, 6, "", -1, "", 5)))> = %<(SLibCG_SE(SLibCG_EI(15, 6, "", -1, "", 5)))>;
+for (i = 0; i < 20; i++) {
+    /* Outport: '<Root>/ext2irb.robot[0].mocgendata.string1[i]' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.string1[i]'
+ */
+    %<(SLibCG_SE(SLibCG_EO(8, 20, "", -1, "i", 0)))> = %<(SLibCG_SE(SLibCG_EI(22, 20, "", -1, "i", 0)))>;
+    /* Outport: '<Root>/ext2irb.robot[0].mocgendata.string2[i]' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.string2[i]'
+ */
+    %<(SLibCG_SE(SLibCG_EO(9, 20, "", -1, "i", 0)))> = %<(SLibCG_SE(SLibCG_EI(23, 20, "", -1, "i", 0)))>;
+}
+/* Outport: '<Root>/ext2irb.robot[0].mocgendata.value2' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.value2'
+ */
+%<(SLibCG_SE(SLibCG_EO(10, 1, "", -1, "", 0)))> = %<(SLibCG_SE(SLibCG_EI(24, 1, "", -1, "", 0)))>;
+/* Outport: '<Root>/ext2irb.robot[0].mocgendata.value3' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.value3'
+ */
+%<(SLibCG_SE(SLibCG_EO(11, 1, "", -1, "", 0)))> = %<(SLibCG_SE(SLibCG_EI(25, 1, "", -1, "", 0)))>;
+/* Outport: '<Root>/ext2irb.robot[0].mocgendata.value4' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.value4'
+ */
+%<(SLibCG_SE(SLibCG_EO(12, 1, "", -1, "", 0)))> = %<(SLibCG_SE(SLibCG_EI(26, 1, "", -1, "", 0)))>;
+/* Outport: '<Root>/ext2irb.robot[0].mocgendata.value5' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.value5'
+ */
+%<(SLibCG_SE(SLibCG_EO(13, 1, "", -1, "", 0)))> = %<(SLibCG_SE(SLibCG_EI(27, 1, "", -1, "", 0)))>;
+/* Outport: '<Root>/ext2irb.robot[0].mocgendata.value6' incorporates:
+ *  Inport: '<Root>/irb2ext.robot[0].mocgendata.value6'
+ */
+%<(SLibCG_SE(SLibCG_EO(14, 1, "", -1, "", 0)))> = %<(SLibCG_SE(SLibCG_EI(28, 1, "", -1, "", 0)))>;
+%<SLibInsertSolverResetCode()>\
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(0, 1, 0)
+%<comma>SimStructType S\
+%assign comma = ", "
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 1, fcnProtoType)>
+
+%assign localVarDecl = ""
+%openfile localVarDecl
+int32_T i;
+
+%closefile localVarDecl
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction

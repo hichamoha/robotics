@@ -1,0 +1,28 @@
+On TURING computer:
+
+cp example file 
+
+cd /home/$USER/extctrl/testar20200707
+cp /opt/robot/example/simulink/extctrl_irc5_main/extctrl_example.mdl extctrl_example20200707.mdl
+
+
+matlab
+>> extctrl_example20200707.mdl
+% press red box to initialize, close and reopen extctrl_example20200707.mdl again to be sure that variables and paths are updated
+
+In Simulink Menu -> Tools -> Code Generation -> Options -> Optimization -> Signal and Parameters -> Configure... One can set the global tunable parameters
+
+Then build model (ctrl+b) to compile it into a executable file.
+
+/opt/robot/example/opcom/lth_net_xeno -v /dev/ttyUSB0 localhost 2000
+
+Unlock brakes in FlexPendant and give a slight touch to its joystick before clicking on Obtain in the lth_net_xeno interface.
+
+
+look at https://wiki.control.lth.se/RobotLab (explains info about the logging process)
+
+logger: 
+ orca_log -t 10 -d 2 -o /dev/stdout --host turing --port 2000 | orca_log2matlab /dev/stdin > /tmp/$USER/x.txt 
+
+view logged info: with kst (fast and data can be seen in parallel to execution)
+
