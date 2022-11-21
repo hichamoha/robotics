@@ -10,7 +10,7 @@ the accelerometer and the gyro to estimate and track the angle of the pendulum.
 ## Literature
 - Spong, M.W., Hutchinson, S., and Vidyasagar, M., Robot Modeling and Control, John Wiley and Sons, 2006
 - Lecture notes by Leonid Freidovich (based on Spong et al)
-- Peter Corke’s robot toolbox (matlab)
+- Peter Corke’s robot toolbox (Matlab)
 - Kevin Lynch and Frank Park, "Modern Robotics: Mechanics, Planning, and Control"  
 
 
