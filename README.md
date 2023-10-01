@@ -1,5 +1,5 @@
 # robotics - Crane Damping
-## Introduction 
+## Robotics: Introduction 
 The following conceptual problems must be resolved to make a robot succeed in performing a typical task:
 - Forward Kinematics 
 - Inverse Kinematics 
@@ -29,7 +29,7 @@ The following conceptual problems must be resolved to make a robot succeed in pe
 
 
 
-## Project Description
+## Project Description: Crane Damping
 The purpose of this project is to design a controller for damping a crane with a swinging load. The system
 consists of the robot **ABB IRB 140** and a free swinging pendulum attached to the robot. The controller
 will be implemented and evaluated using MATLAB/Simulink, then the satisfying design will be tried on
