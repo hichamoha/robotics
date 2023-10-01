@@ -1,4 +1,4 @@
-# robotics - Crane Damping
+# Robotics - Crane Damping
 ## Robotics: Introduction 
 The following conceptual problems must be resolved to make a robot succeed in performing a typical task:
 - Forward Kinematics 
